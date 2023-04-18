@@ -1,0 +1,60 @@
+<hr>
+<p>title: 为什么要学习<br>date: 2022-03-23 12:34:56<br>updated: 2022-03-23 13:00:00<br>tags:</p>
+<ul>
+<li>标签1</li>
+<li>标签2<br>categories:</li>
+<li>分类1</li>
+<li>分类2<br>layout: page</li>
+</ul>
+<hr>
+<h1 id="第一节-为什么要学习Maven？"><a href="#第一节-为什么要学习Maven？" class="headerlink" title="第一节 为什么要学习Maven？"></a>第一节 为什么要学习Maven？</h1><h2 id="1、Maven-作为依赖管理工具"><a href="#1、Maven-作为依赖管理工具" class="headerlink" title="1、Maven 作为依赖管理工具"></a>1、Maven 作为依赖管理工具</h2><h3 id="①jar-包的规模"><a href="#①jar-包的规模" class="headerlink" title="①jar 包的规模"></a>①jar 包的规模</h3><p>随着我们使用越来越多的框架，或者框架封装程度越来越高，项目中使用的jar包也越来越多。项目中，一个模块里面用到上百个jar包是非常正常的。</p>
+<p>比如下面的例子，我们只用到 SpringBoot、SpringCloud 框架中的三个功能：</p>
+<ul>
+<li>Nacos 服务注册发现</li>
+<li>Web 框架环境</li>
+<li>图模板技术 Thymeleaf</li>
+</ul>
+<p>最终却导入了 106 个 jar 包：</p>
+<blockquote>
+<p>org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile<br>com.netflix.ribbon: ribbon:jar:2.3.0:compile<br>org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.3.6.RELEASE:compile<br>commons-configuration:commons-configuration:jar:1.8:compile<br>org.apache.logging.log4j:log4j-api:jar:2.13.3:compile<br>org.springframework:spring-beans:jar:5.2.11.RELEASE:compile<br>org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.6.RELEASE:compile<br>org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.39:compile<br>com.alibaba.cloud:spring-cloud-alibaba-commons:jar:2.2.6.RELEASE:compile<br>org.bouncycastle:bcprov-jdk15on:jar:1.64:compile<br>org.springframework.security:spring-security-crypto:jar:5.3.5.RELEASE:compile<br>org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile<br>com.google.j2objc:j2objc-annotations:jar:1.3:compile<br>com.fasterxml.jackson.core:jackson-databind:jar:2.11.3:compile<br>io.reactivex:rxjava:jar:1.3.8:compile<br>ch.qos.logback:logback-classic:jar:1.2.3:compile<br>org.springframework:spring-web:jar:5.2.11.RELEASE:compile<br>io.reactivex:rxnetty-servo:jar:0.4.9:runtime<br>org.springframework:spring-core:jar:5.2.11.RELEASE:compile<br>io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile<br>io.github.openfeign.form:feign-form:jar:3.8.0:compile<br>com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile<br>org.apache.httpcomponents:httpcore:jar:4.4.13:compile<br>org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile<br>org.slf4j:jul-to-slf4j:jar:1.7.30:compile<br>com.atguigu.demo:demo09-base-entity:jar:1.0-SNAPSHOT:compile<br>org.yaml:snakeyaml:jar:1.26:compile<br>org.springframework.boot:spring-boot-starter-logging:jar:2.3.6.RELEASE:compile<br>io.reactivex:rxnetty-contexts:jar:0.4.9:runtime<br>org.apache.httpcomponents:httpclient:jar:4.5.13:compile<br>io.github.openfeign:feign-core:jar:10.10.1:compile<br>org.springframework.boot:spring-boot-starter-aop:jar:2.3.6.RELEASE:compile<br>org.hdrhistogram:HdrHistogram:jar:2.1.9:compile<br>org.springframework:spring-context:jar:5.2.11.RELEASE:compile<br>commons-lang:commons-lang:jar:2.6:compile<br>io.prometheus:simpleclient:jar:0.5.0:compile<br>ch.qos.logback:logback-core:jar:1.2.3:compile<br>org.springframework:spring-webmvc:jar:5.2.11.RELEASE:compile<br>com.sun.jersey:jersey-core:jar:1.19.1:runtime<br>javax.ws.rs:jsr311-api:jar:1.1.1:runtime<br>javax.inject:javax.inject:jar:1:runtime<br>org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.6.RELEASE:compile<br>com.netflix.ribbon:ribbon-core:jar:2.3.0:compile<br>com.netflix.hystrix:hystrix-core:jar:1.5.18:compile<br>com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime<br>org.springframework.boot:spring-boot-starter-json:jar:2.3.6.RELEASE:compile<br>org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.6.RELEASE:compile<br>com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.3:compile<br>com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:runtime<br>io.github.openfeign:feign-hystrix:jar:10.10.1:compile<br>io.github.openfeign:feign-slf4j:jar:10.10.1:compile<br>com.alibaba.nacos:nacos-client:jar:1.4.2:compile<br>org.apache.httpcomponents:httpcore-nio:jar:4.4.13:compile<br>com.sun.jersey:jersey-client:jar:1.19.1:runtime<br>org.springframework.cloud:spring-cloud-context:jar:2.2.6.RELEASE:compile<br>org.glassfish:jakarta.el:jar:3.0.3:compile<br>org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile<br>com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.3:compile<br>org.springframework.cloud:spring-cloud-commons:jar:2.2.6.RELEASE:compile<br>org.aspectj:aspectjweaver:jar:1.9.6:compile<br>com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.6.RELEASE:compile<br>com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile<br>com.alibaba.spring:spring-context-support:jar:1.0.10:compile<br>jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile<br>org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile<br>com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime<br>com.fasterxml.jackson.core:jackson-annotations:jar:2.11.3:compile<br>com.google.guava:guava:jar:29.0-jre:compile<br>com.google.guava:failureaccess:jar:1.0.1:compile<br>org.springframework.boot:spring-boot:jar:2.3.6.RELEASE:compile<br>com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.3:compile<br>com.atguigu.demo:demo08-base-api:jar:1.0-SNAPSHOT:compile<br>org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.6.RELEASE:compile<br>org.springframework.boot:spring-boot-autoconfigure:jar:2.3.6.RELEASE:compile<br>org.slf4j:slf4j-api:jar:1.7.30:compile<br>commons-io:commons-io:jar:2.7:compile<br>org.springframework.cloud:spring-cloud-starter:jar:2.2.6.RELEASE:compile<br>org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.39:compile<br>io.reactivex:rxnetty:jar:0.4.9:runtime<br>com.fasterxml.jackson.core:jackson-core:jar:2.11.3:compile<br>com.google.code.findbugs:jsr305:jar:3.0.2:compile<br>com.netflix.archaius:archaius-core:jar:0.7.6:compile<br>org.springframework.boot:spring-boot-starter-web:jar:2.3.6.RELEASE:compile<br>commons-codec:commons-codec:jar:1.14:compile<br>com.netflix.servo:servo-core:jar:0.12.21:runtime<br>com.google.errorprone:error_prone_annotations:jar:2.3.4:compile<br>org.attoparser:attoparser:jar:2.0.5.RELEASE:compile<br>com.atguigu.demo:demo10-base-util:jar:1.0-SNAPSHOT:compile<br>org.checkerframework:checker-qual:jar:2.11.1:compile<br>org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE:compile<br>commons-fileupload:commons-fileupload:jar:1.4:compile<br>com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile<br>com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime<br>org.unbescape:unbescape:jar:1.1.6.RELEASE:compile<br>org.springframework:spring-jcl:jar:5.2.11.RELEASE:compile<br>com.alibaba.nacos:nacos-common:jar:1.4.2:compile<br>commons-collections:commons-collections:jar:3.2.2:runtime<br>javax.persistence:persistence-api:jar:1.0:compile<br>com.alibaba.nacos:nacos-api:jar:1.4.2:compile<br>org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE:compile<br>org.springframework:spring-aop:jar:5.2.11.RELEASE:compile<br>org.springframework.boot:spring-boot-starter:jar:2.3.6.RELEASE:compile<br>org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.6.RELEASE:compile<br>org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.6.RELEASE:compile<br>org.springframework:spring-expression:jar:5.2.11.RELEASE:compile<br>org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.6.RELEASE:compile</p>
+</blockquote>
+<p>而如果使用 Maven 来引入这些 jar 包只需要配置三个『<strong>依赖</strong>』：</p>
+<pre><code class="xml">    &lt;!-- Nacos 服务注册发现启动器 --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- web启动器依赖 --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- 视图模板技术 thymeleaf --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<h3 id="②jar-包的来源"><a href="#②jar-包的来源" class="headerlink" title="②jar 包的来源"></a>②jar 包的来源</h3><ul>
+<li>这个jar包所属技术的官网。官网通常是英文界面，网站的结构又不尽相同，甚至找到下载链接还发现需要通过特殊的工具下载。</li>
+<li>第三方网站提供下载。问题是不规范，在使用过程中会出现各种问题。<ul>
+<li>jar包的名称</li>
+<li>jar包的版本</li>
+<li>jar包内的具体细节</li>
+</ul>
+</li>
+<li>而使用 Maven 后，依赖对应的 jar 包能够<strong>自动下载</strong>，方便、快捷又规范。</li>
+</ul>
+<h3 id="③jar-包之间的依赖关系"><a href="#③jar-包之间的依赖关系" class="headerlink" title="③jar 包之间的依赖关系"></a>③jar 包之间的依赖关系</h3><p>框架中使用的 jar 包，不仅数量庞大，而且彼此之间存在错综复杂的依赖关系。依赖关系的复杂程度，已经上升到了完全不能靠人力手动解决的程度。另外，jar 包之间有可能产生冲突。进一步增加了我们在 jar 包使用过程中的难度。</p>
+<p>下面是前面例子中 jar 包之间的依赖关系：</p>
+<p><img src="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img006.ab4f2e31.png" alt="images"></p>
+<p>而实际上 jar 包之间的依赖关系是普遍存在的，如果要由程序员手动梳理无疑会增加极高的学习成本，而这些工作又对实现业务功能毫无帮助。</p>
+<p>而使用 Maven 则几乎不需要管理这些关系，极个别的地方调整一下即可，极大的减轻了我们的工作量。</p>
+<h2 id="2、Maven-作为构建管理工具"><a href="#2、Maven-作为构建管理工具" class="headerlink" title="2、Maven 作为构建管理工具"></a>2、Maven 作为构建管理工具</h2><h3 id="①你没有注意过的构建"><a href="#①你没有注意过的构建" class="headerlink" title="①你没有注意过的构建"></a>①你没有注意过的构建</h3><p>你可以不使用 Maven，但是构建必须要做。当我们使用 IDEA 进行开发时，构建是 IDEA 替我们做的。</p>
+<h3 id="②脱离-IDE-环境仍需构建"><a href="#②脱离-IDE-环境仍需构建" class="headerlink" title="②脱离 IDE 环境仍需构建"></a>②脱离 IDE 环境仍需构建</h3><p><img src="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img010.74e515e5.png" alt="images"></p>
+<h2 id="3、结论"><a href="#3、结论" class="headerlink" title="3、结论"></a>3、结论</h2><ul>
+<li><strong>管理规模庞大的 jar 包，需要专门工具。</strong></li>
+<li><strong>脱离 IDE 环境执行构建操作，需要专门工具。</strong></li>
+</ul>

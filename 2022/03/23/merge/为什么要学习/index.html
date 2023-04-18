@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>为什么要学习 | 学习基地</title><meta name="author" content="邱达辉"><meta name="copyright" content="邱达辉"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="第一节 为什么要学习Maven？1、Maven 作为依赖管理工具①jar 包的规模随着我们使用越来越多的框架，或者框架封装程度越来越高，项目中使用的jar包也越来越多。项目中，一个模块里面用到上百个jar包是非常正常的。 比如下面的例子，我们只用到 SpringBoot、SpringCloud 框架中的三个功能：  Nacos 服务注册发现 Web 框架环境 图模板技术 Thymeleaf  最终">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么要学习">
+<meta property="og:url" content="http://example.com/2022/03/23/merge/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="学习基地">
+<meta property="og:description" content="第一节 为什么要学习Maven？1、Maven 作为依赖管理工具①jar 包的规模随着我们使用越来越多的框架，或者框架封装程度越来越高，项目中使用的jar包也越来越多。项目中，一个模块里面用到上百个jar包是非常正常的。 比如下面的例子，我们只用到 SpringBoot、SpringCloud 框架中的三个功能：  Nacos 服务注册发现 Web 框架环境 图模板技术 Thymeleaf  最终">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/logo.jpg">
+<meta property="article:published_time" content="2022-03-23T04:34:56.000Z">
+<meta property="article:modified_time" content="2022-03-23T05:00:00.000Z">
+<meta property="article:author" content="邱达辉">
+<meta property="article:tag" content="标签1">
+<meta property="article:tag" content="标签2">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/logo.jpg"><link rel="shortcut icon" href="/img/logo.jpg"><link rel="canonical" href="http://example.com/2022/03/23/merge/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '为什么要学习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-23 13:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/logo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/css/"><span> css</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/js"><span> JavaScript</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/vue"><span> vue</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/vuex"><span> vuex</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/vue-router"><span> vue-router</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/es6"><span> ES6</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span> 微信小程序</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/react"><span> react</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/spring"><span> spring</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/springboot"><span> springboot</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/springcloud"><span> springcloud</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/mybatis-plus"><span> mybatis-plus</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/mysql"><span> mysql</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/redis"><span> redis</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/linux"><span> linux</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/springsecurity"><span> springsecurity</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/spring%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4"><span> springalibaba</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/rabbitmq"><span> rabbitmq</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 机器学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/opencv"><span> opencv</span></a></li><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/numpy"><span> numpy</span></a></li><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/pandas"><span> pandas</span></a></li><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/sklearn"><span> sklearn</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 深度学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/pytorch"><span> pytorch</span></a></li><li><a class="site-page child" href="/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/tensorflow"><span> tensorflow</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 网络安全</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86"><span> 计网知识</span></a></li><li><a class="site-page child" href="/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/kali"><span> kali</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 中间件</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq"><span> rabbitmq</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%B7%A5%E5%85%B7/git"><span> git</span></a></li><li><a class="site-page child" href="/%E5%B7%A5%E5%85%B7/docker"><span> docker</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> python</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/python/%E7%88%AC%E8%99%AB"><span> 爬虫</span></a></li><li><a class="site-page child" href="/python/flask"><span> flask</span></a></li><li><a class="site-page child" href="/python/django"><span> django</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 算法</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83"><span> 贪心算法</span></a></li><li><a class="site-page child" href="/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span> 动态规划</span></a></li><li><a class="site-page child" href="/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF"><span> 回溯</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 大数据</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop"><span> hadoop</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/img/detail-top.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="学习基地"><span class="site-name">学习基地</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 前端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/css/"><span> css</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/js"><span> JavaScript</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/vue"><span> vue</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/vuex"><span> vuex</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/vue-router"><span> vue-router</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/es6"><span> ES6</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span> 微信小程序</span></a></li><li><a class="site-page child" href="/%E5%89%8D%E7%AB%AF/react"><span> react</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 后端</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/spring"><span> spring</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/springboot"><span> springboot</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/springcloud"><span> springcloud</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/mybatis-plus"><span> mybatis-plus</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/mysql"><span> mysql</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/redis"><span> redis</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/linux"><span> linux</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/springsecurity"><span> springsecurity</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/spring%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4"><span> springalibaba</span></a></li><li><a class="site-page child" href="/%E5%90%8E%E7%AB%AF/rabbitmq"><span> rabbitmq</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 机器学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/opencv"><span> opencv</span></a></li><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/numpy"><span> numpy</span></a></li><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/pandas"><span> pandas</span></a></li><li><a class="site-page child" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/sklearn"><span> sklearn</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 深度学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/pytorch"><span> pytorch</span></a></li><li><a class="site-page child" href="/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/tensorflow"><span> tensorflow</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 网络安全</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86"><span> 计网知识</span></a></li><li><a class="site-page child" href="/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/kali"><span> kali</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 中间件</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq"><span> rabbitmq</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%B7%A5%E5%85%B7/git"><span> git</span></a></li><li><a class="site-page child" href="/%E5%B7%A5%E5%85%B7/docker"><span> docker</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> python</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/python/%E7%88%AC%E8%99%AB"><span> 爬虫</span></a></li><li><a class="site-page child" href="/python/flask"><span> flask</span></a></li><li><a class="site-page child" href="/python/django"><span> django</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 算法</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83"><span> 贪心算法</span></a></li><li><a class="site-page child" href="/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span> 动态规划</span></a></li><li><a class="site-page child" href="/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF"><span> 回溯</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 大数据</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop"><span> hadoop</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">为什么要学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-23T04:34:56.000Z" title="发表于 2022-03-23 12:34:56">2022-03-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-23T05:00:00.000Z" title="更新于 2022-03-23 13:00:00">2022-03-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%86%E7%B1%BB1/%E5%88%86%E7%B1%BB2/">分类2</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="为什么要学习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h1><span id="第一节-为什么要学习maven">第一节 为什么要学习Maven？</span></h1><h2><span id="1-maven-作为依赖管理工具">1、Maven 作为依赖管理工具</span></h2><h3><span id="1jar-包的规模">①jar 包的规模</span></h3><p>随着我们使用越来越多的框架，或者框架封装程度越来越高，项目中使用的jar包也越来越多。项目中，一个模块里面用到上百个jar包是非常正常的。</p>
+<p>比如下面的例子，我们只用到 SpringBoot、SpringCloud 框架中的三个功能：</p>
+<ul>
+<li>Nacos 服务注册发现</li>
+<li>Web 框架环境</li>
+<li>图模板技术 Thymeleaf</li>
+</ul>
+<p>最终却导入了 106 个 jar 包：</p>
+<blockquote>
+<p>org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile<br>com.netflix.ribbon: ribbon:jar:2.3.0:compile<br>org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.3.6.RELEASE:compile<br>commons-configuration:commons-configuration:jar:1.8:compile<br>org.apache.logging.log4j:log4j-api:jar:2.13.3:compile<br>org.springframework:spring-beans:jar:5.2.11.RELEASE:compile<br>org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.6.RELEASE:compile<br>org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.39:compile<br>com.alibaba.cloud:spring-cloud-alibaba-commons:jar:2.2.6.RELEASE:compile<br>org.bouncycastle:bcprov-jdk15on:jar:1.64:compile<br>org.springframework.security:spring-security-crypto:jar:5.3.5.RELEASE:compile<br>org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile<br>com.google.j2objc:j2objc-annotations:jar:1.3:compile<br>com.fasterxml.jackson.core:jackson-databind:jar:2.11.3:compile<br>io.reactivex:rxjava:jar:1.3.8:compile<br>ch.qos.logback:logback-classic:jar:1.2.3:compile<br>org.springframework:spring-web:jar:5.2.11.RELEASE:compile<br>io.reactivex:rxnetty-servo:jar:0.4.9:runtime<br>org.springframework:spring-core:jar:5.2.11.RELEASE:compile<br>io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile<br>io.github.openfeign.form:feign-form:jar:3.8.0:compile<br>com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile<br>org.apache.httpcomponents:httpcore:jar:4.4.13:compile<br>org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile<br>org.slf4j:jul-to-slf4j:jar:1.7.30:compile<br>com.atguigu.demo:demo09-base-entity:jar:1.0-SNAPSHOT:compile<br>org.yaml:snakeyaml:jar:1.26:compile<br>org.springframework.boot:spring-boot-starter-logging:jar:2.3.6.RELEASE:compile<br>io.reactivex:rxnetty-contexts:jar:0.4.9:runtime<br>org.apache.httpcomponents:httpclient:jar:4.5.13:compile<br>io.github.openfeign:feign-core:jar:10.10.1:compile<br>org.springframework.boot:spring-boot-starter-aop:jar:2.3.6.RELEASE:compile<br>org.hdrhistogram:HdrHistogram:jar:2.1.9:compile<br>org.springframework:spring-context:jar:5.2.11.RELEASE:compile<br>commons-lang:commons-lang:jar:2.6:compile<br>io.prometheus:simpleclient:jar:0.5.0:compile<br>ch.qos.logback:logback-core:jar:1.2.3:compile<br>org.springframework:spring-webmvc:jar:5.2.11.RELEASE:compile<br>com.sun.jersey:jersey-core:jar:1.19.1:runtime<br>javax.ws.rs:jsr311-api:jar:1.1.1:runtime<br>javax.inject:javax.inject:jar:1:runtime<br>org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.6.RELEASE:compile<br>com.netflix.ribbon:ribbon-core:jar:2.3.0:compile<br>com.netflix.hystrix:hystrix-core:jar:1.5.18:compile<br>com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime<br>org.springframework.boot:spring-boot-starter-json:jar:2.3.6.RELEASE:compile<br>org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.6.RELEASE:compile<br>com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.3:compile<br>com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:runtime<br>io.github.openfeign:feign-hystrix:jar:10.10.1:compile<br>io.github.openfeign:feign-slf4j:jar:10.10.1:compile<br>com.alibaba.nacos:nacos-client:jar:1.4.2:compile<br>org.apache.httpcomponents:httpcore-nio:jar:4.4.13:compile<br>com.sun.jersey:jersey-client:jar:1.19.1:runtime<br>org.springframework.cloud:spring-cloud-context:jar:2.2.6.RELEASE:compile<br>org.glassfish:jakarta.el:jar:3.0.3:compile<br>org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile<br>com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.3:compile<br>org.springframework.cloud:spring-cloud-commons:jar:2.2.6.RELEASE:compile<br>org.aspectj:aspectjweaver:jar:1.9.6:compile<br>com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.6.RELEASE:compile<br>com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile<br>com.alibaba.spring:spring-context-support:jar:1.0.10:compile<br>jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile<br>org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile<br>com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime<br>com.fasterxml.jackson.core:jackson-annotations:jar:2.11.3:compile<br>com.google.guava:guava:jar:29.0-jre:compile<br>com.google.guava:failureaccess:jar:1.0.1:compile<br>org.springframework.boot:spring-boot:jar:2.3.6.RELEASE:compile<br>com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.3:compile<br>com.atguigu.demo:demo08-base-api:jar:1.0-SNAPSHOT:compile<br>org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.6.RELEASE:compile<br>org.springframework.boot:spring-boot-autoconfigure:jar:2.3.6.RELEASE:compile<br>org.slf4j:slf4j-api:jar:1.7.30:compile<br>commons-io:commons-io:jar:2.7:compile<br>org.springframework.cloud:spring-cloud-starter:jar:2.2.6.RELEASE:compile<br>org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.39:compile<br>io.reactivex:rxnetty:jar:0.4.9:runtime<br>com.fasterxml.jackson.core:jackson-core:jar:2.11.3:compile<br>com.google.code.findbugs:jsr305:jar:3.0.2:compile<br>com.netflix.archaius:archaius-core:jar:0.7.6:compile<br>org.springframework.boot:spring-boot-starter-web:jar:2.3.6.RELEASE:compile<br>commons-codec:commons-codec:jar:1.14:compile<br>com.netflix.servo:servo-core:jar:0.12.21:runtime<br>com.google.errorprone:error_prone_annotations:jar:2.3.4:compile<br>org.attoparser:attoparser:jar:2.0.5.RELEASE:compile<br>com.atguigu.demo:demo10-base-util:jar:1.0-SNAPSHOT:compile<br>org.checkerframework:checker-qual:jar:2.11.1:compile<br>org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE:compile<br>commons-fileupload:commons-fileupload:jar:1.4:compile<br>com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile<br>com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime<br>org.unbescape:unbescape:jar:1.1.6.RELEASE:compile<br>org.springframework:spring-jcl:jar:5.2.11.RELEASE:compile<br>com.alibaba.nacos:nacos-common:jar:1.4.2:compile<br>commons-collections:commons-collections:jar:3.2.2:runtime<br>javax.persistence:persistence-api:jar:1.0:compile<br>com.alibaba.nacos:nacos-api:jar:1.4.2:compile<br>org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE:compile<br>org.springframework:spring-aop:jar:5.2.11.RELEASE:compile<br>org.springframework.boot:spring-boot-starter:jar:2.3.6.RELEASE:compile<br>org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.6.RELEASE:compile<br>org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.6.RELEASE:compile<br>org.springframework:spring-expression:jar:5.2.11.RELEASE:compile<br>org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.6.RELEASE:compile</p>
+</blockquote>
+<p>而如果使用 Maven 来引入这些 jar 包只需要配置三个『<strong>依赖</strong>』：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Nacos 服务注册发现启动器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-discovery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- web启动器依赖 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 视图模板技术 thymeleaf --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-thymeleaf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3><span id="2jar-包的来源">②jar 包的来源</span></h3><ul>
+<li>这个jar包所属技术的官网。官网通常是英文界面，网站的结构又不尽相同，甚至找到下载链接还发现需要通过特殊的工具下载。</li>
+<li>第三方网站提供下载。问题是不规范，在使用过程中会出现各种问题。<ul>
+<li>jar包的名称</li>
+<li>jar包的版本</li>
+<li>jar包内的具体细节</li>
+</ul>
+</li>
+<li>而使用 Maven 后，依赖对应的 jar 包能够<strong>自动下载</strong>，方便、快捷又规范。</li>
+</ul>
+<h3><span id="3jar-包之间的依赖关系">③jar 包之间的依赖关系</span></h3><p>框架中使用的 jar 包，不仅数量庞大，而且彼此之间存在错综复杂的依赖关系。依赖关系的复杂程度，已经上升到了完全不能靠人力手动解决的程度。另外，jar 包之间有可能产生冲突。进一步增加了我们在 jar 包使用过程中的难度。</p>
+<p>下面是前面例子中 jar 包之间的依赖关系：</p>
+<p><img src="/img/loading.gif" data-original="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img006.ab4f2e31.png" alt="images"></p>
+<p>而实际上 jar 包之间的依赖关系是普遍存在的，如果要由程序员手动梳理无疑会增加极高的学习成本，而这些工作又对实现业务功能毫无帮助。</p>
+<p>而使用 Maven 则几乎不需要管理这些关系，极个别的地方调整一下即可，极大的减轻了我们的工作量。</p>
+<h2><span id="2-maven-作为构建管理工具">2、Maven 作为构建管理工具</span></h2><h3><span id="1你没有注意过的构建">①你没有注意过的构建</span></h3><p>你可以不使用 Maven，但是构建必须要做。当我们使用 IDEA 进行开发时，构建是 IDEA 替我们做的。</p>
+<h3><span id="2脱离-ide-环境仍需构建">②脱离 IDE 环境仍需构建</span></h3><p><img src="/img/loading.gif" data-original="http://heavy_code_industry.gitee.io/code_heavy_industry/assets/img/img010.74e515e5.png" alt="images"></p>
+<h2><span id="3-结论">3、结论</span></h2><ul>
+<li><strong>管理规模庞大的 jar 包，需要专门工具。</strong></li>
+<li><strong>脱离 IDE 环境执行构建操作，需要专门工具。</strong></li>
+</ul>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">邱达辉</div><div class="author-info__description">进入我的世界了解我吧</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>关注我</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">今天你学习了吗?</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">第一节 为什么要学习Maven？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">1、Maven 作为依赖管理工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">①jar 包的规模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">②jar 包的来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.3.</span> <span class="toc-text">③jar 包之间的依赖关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">2、Maven 作为构建管理工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.1.</span> <span class="toc-text">①你没有注意过的构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.2.</span> <span class="toc-text">②脱离 IDE 环境仍需构建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.3.</span> <span class="toc-text">3、结论</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/17/merge/" title="merge">merge</a><time datetime="2023-04-17T00:43:34.000Z" title="发表于 2023-04-17 08:43:34">2023-04-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/merge/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0/" title="为什么要学习">为什么要学习</a><time datetime="2022-03-23T04:34:56.000Z" title="发表于 2022-03-23 12:34:56">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/merge/%E4%BB%80%E4%B9%88%E6%98%AFmaven/" title="什么是maven">什么是maven</a><time datetime="2022-03-23T04:34:56.000Z" title="发表于 2022-03-23 12:34:56">2022-03-23</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/detail-top.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 邱达辉</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">世上最幸运的事就是喜欢上一个人</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body></html>
